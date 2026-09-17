@@ -13,7 +13,8 @@ esp32:
   cpu_frequency: 240MHz
   framework:
     type: esp-idf
-
+    advanced:
+      sram1_as_iram: true
 logger:
 api:
 
@@ -209,7 +210,7 @@ light:
     default_transition_length: 0s
     chipset: SK6812
     num_leds: 1
-    rgb_order: grb
+    channel_colors: grb
     effects:
       - pulse:
           name: "Slow Pulse"
